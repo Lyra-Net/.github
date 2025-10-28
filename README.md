@@ -27,29 +27,29 @@ Lyra được xây dựng theo mô hình **Microservices Architecture**, đảm 
 
 ### Các dịch vụ chính:
 
-| Service                  | Mô tả                                                                                       |
-| ------------------------ | ------------------------------------------------------------------------------------------- |
-| **Identity Service**     | Xác thực & quản lý tài khoản người dùng (JWT, session, token rotation, refresh token, v.v.) |
-| **Music Service**        | Quản lý metadata của bài hát, album, nghệ sĩ, và playlist                                   |
-| **Streaming Service**    | Xử lý & phân phối stream nhạc (Node.js + Kafka)                                             |
-| **Feed Service**         | Quản lý feed bài hát/playlist, theo dõi hoạt động của bạn bè                                |
-| **Room Service**         | Quản lý Listening Room — đồng bộ playback giữa nhiều client qua WebSocket                   |
-| **Notification Service** | Gửi thông báo realtime khi có tương tác mới                                                 |
-| **Gateway API**          | Cổng vào hệ thống, hỗ trợ cả gRPC và HTTP (REST) tuỳ theo loại client                       |
+| Service            | Mô tả                                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------------- |
+| **Auth Service**   | Xác thực & quản lý tài khoản người dùng (JWT, session, token rotation, refresh token, v.v.) |
+| **Song Service**   | Quản lý metadata của bài hát, album, nghệ sĩ, và playlist                                   |
+| **Stream Service** | Xử lý & phân phối stream nhạc (Node.js + Kafka)                                             |
+| **Room Service**   | Quản lý Listening Room — đồng bộ playback giữa nhiều client qua WebSocket                   |
+| **Gateway API**    | Cổng vào hệ thống, hỗ trợ cả gRPC và HTTP (REST) tuỳ theo loại client                       |
+
+and more...
 
 ---
 
 ## 🧠 Công nghệ sử dụng
 
-| Thành phần                 | Công nghệ                                |
-| -------------------------- | ---------------------------------------- |
-| **Ngôn ngữ chính**         | Go, Node.js, TypeScript                  |
-| **Giao tiếp giữa service** | gRPC, Kafka                              |
-| **Database**               | PostgreSQL, Redis, MinIO                 |
-| **Gateway**                | Apache APISIX                            |
-| **Realtime Communication** | WebSocket                                |
-| **Triển khai & Scaling**   | Docker, Kubernetes                       |
-| **Frontend (Client)**      | React / Next.js (SPA + SSR), TailwindCSS |
+| Thành phần                 | Công nghệ                |
+| -------------------------- | ------------------------ |
+| **Ngôn ngữ chính**         | Go, TypeScript           |
+| **Giao tiếp giữa service** | gRPC, Kafka              |
+| **Database**               | PostgreSQL, Redis, MinIO |
+| **Gateway**                | Apache APISIX            |
+| **Realtime Communication** | WebSocket                |
+| **Triển khai & Scaling**   | Docker, Kubernetes       |
+| **Frontend (Client)**      | React, TailwindCSS       |
 
 ---
 
